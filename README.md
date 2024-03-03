@@ -1,0 +1,1 @@
+Our app connects organ donors with recipients, saving lives. Users indicate if they'll donate or need organs. Our matching system finds suitable matches, prioritizing privacy and legal matters. Community involvement is key. Health record integration streamlines the process. We offer 24/7 support. Join us and make a difference!
