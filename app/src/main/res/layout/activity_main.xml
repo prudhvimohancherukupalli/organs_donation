@@ -1,23 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    android:visibility="visible"
-    tools:context=".MainActivity">
+    tools:context=".homepage">
 
     <TextView
         android:id="@+id/Title"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="#CDDC39"
         android:gravity="center_horizontal"
-        android:text="Organ Donation"
+        android:text="OrganDonation"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="0dp"/>
+
+    <EditText
+        android:id="@+id/nameET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="78dp"
+        android:ems="10"
+        android:hint="EnterName"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/emailET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:hint="EnterEmail"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameET"/>
+
+    <EditText
+        android:id="@+id/passwordET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="93dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="EnterPassword"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailET"/>
+
+    <Button
+        android:id="@+id/loginBTN"
+        android:layout_width="89dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="44dp"
+        android:text="LOGIN"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordET"/>
+
+    <Button
+        android:id="@+id/RegisterBTN"
+        android:layout_width="96dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="40dp"
+        android:text="Register"
+        app:layout_constraintStart_toEndOf="@+id/loginBTN"
+        app:layout_constraintTop_toBottomOf="@+id/passwordET"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
