@@ -20,4 +20,37 @@
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/DonarBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Donar"
+        tools:layout_editor_absoluteX="137dp"
+        tools:layout_editor_absoluteY="152dp" />
+
+    <Button
+        android:id="@+id/BloodDonarBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Blood donar"
+        tools:layout_editor_absoluteX="129dp"
+        tools:layout_editor_absoluteY="237dp" />
+
+    <Button
+        android:id="@+id/reciverBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reciver"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="343dp" />
+
+    <Button
+        android:id="@+id/helpBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HELP?"
+        tools:layout_editor_absoluteX="320dp"
+        tools:layout_editor_absoluteY="667dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
