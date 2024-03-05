@@ -10,14 +10,14 @@ import android.widget.Button;
 import java.time.Instant;
 
 public class MainActivity extends AppCompatActivity {
-    Button loginBTN;
+    Button logInBTN;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        loginBTN = findViewById(R.id.loginBTN);
-            loginBTN.setOnClickListener(new View.OnClickListener() {
+        logInBTN = findViewById(R.id.logInBTN);
+            logInBTN.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent ini = new Intent(MainActivity.this, homepage.class);

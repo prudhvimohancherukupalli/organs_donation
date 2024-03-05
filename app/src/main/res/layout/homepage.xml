@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#EDE2E2"
     android:visibility="visible"
-    tools:context=".MainActivity">
+    tools:context=".homepage">
 
     <TextView
         android:id="@+id/Title"
