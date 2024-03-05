@@ -7,7 +7,8 @@ import android.os.Bundle;
 public class homepage extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle sava
+                            edInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.homepage);
     }
