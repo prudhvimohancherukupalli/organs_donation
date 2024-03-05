@@ -24,7 +24,6 @@
         android:id="@+id/nameET"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="80dp"
         android:ems="10"
         android:hint="EnterName"
@@ -36,7 +35,6 @@
         android:id="@+id/emailET"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="EnterEmail"
@@ -48,31 +46,37 @@
         android:id="@+id/passwordET"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="EnterPassword"
-        android:inputType="text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailET" />
+        android:hint="Enter password"
+        tools:layout_editor_absoluteX="60dp"
+        tools:layout_editor_absoluteY="212dp" />
 
     <Button
         android:id="@+id/loginBTN"
         android:layout_width="89dp"
         android:layout_height="40dp"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="50dp"
         android:text="LOGIN"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordET"/>
+        app:layout_constraintTop_toBottomOf="@+id/passwordET" />
 
     <Button
         android:id="@+id/RegisterBTN"
-        android:layout_width="96dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="115dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="50dp"
         android:text="Register"
         app:layout_constraintStart_toEndOf="@+id/loginBTN"
-        app:layout_constraintTop_toBottomOf="@+id/passwordET"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toBottomOf="@+id/passwordET" />
+</androidx.constraintlayout.widget.ConstraintLayout><![CDATA[=======
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="12dp"
+>>>>>>> 82050e527c737ca7e5266bfe927ee7ed07bf9850
+        android:ems="10"
+        android:hint="EnterPassword"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailET" />
+
+    ]]>
