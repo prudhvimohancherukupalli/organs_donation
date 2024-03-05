@@ -16,12 +16,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        loginBTN.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent ini = new Intent(MainActivity.this, homepage.class);
-                startActivity(ini);
-            }
-        });
-    }
+        loginBTN = findViewById(R.id.loginBTN);
+            loginBTN.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent ini = new Intent(MainActivity.this, homepage.class);
+                    startActivity(ini);
+                }
+            });
+        }
 }
