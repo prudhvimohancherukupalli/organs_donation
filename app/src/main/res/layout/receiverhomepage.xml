@@ -6,9 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".receiverhomepage">
 
+
     <TextView
         android:id="@+id/Title"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="#CDDC39"
@@ -16,13 +17,72 @@
         android:text="OrganDonation"
         android:textSize="34sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:id="@+id/view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Title" />
 
+    <TextView
+        android:id="@+id/heartTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Heart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp" />
+
+    <TextView
+        android:id="@+id/liverTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Liver"
+        app:layout_constraintStart_toEndOf="@id/heartTV"
+        app:layout_constraintTop_toTopOf="@id/heartTV"
+        android:layout_marginStart="64dp" />
+
+    <TextView
+        android:id="@+id/kidneysTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kidneys"
+        app:layout_constraintStart_toStartOf="@id/heartTV"
+        app:layout_constraintTop_toBottomOf="@id/heartTV"
+        android:layout_marginTop="32dp" />
+
+    <TextView
+        android:id="@+id/pancreasTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pancreas"
+        app:layout_constraintStart_toEndOf="@id/kidneysTV"
+        app:layout_constraintTop_toTopOf="@id/kidneysTV"
+        android:layout_marginStart="64dp" />
+
+    <TextView
+        android:id="@+id/smallBowellTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Small Bowel"
+        app:layout_constraintStart_toStartOf="@id/kidneysTV"
+        app:layout_constraintTop_toBottomOf="@id/kidneysTV"
+        android:layout_marginTop="32dp" />
+
+    <TextView
+        android:id="@+id/lungsTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lungs"
+        app:layout_constraintStart_toEndOf="@id/smallBowellTV"
+        app:layout_constraintTop_toTopOf="@id/smallBowellTV"
+        android:layout_marginStart="64dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
