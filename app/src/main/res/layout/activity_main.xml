@@ -5,74 +5,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".homepage">
+    tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/Title"
-        android:layout_width="match_parent"
+        android:id="@+id/title"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="#CDDC39"
         android:gravity="center_horizontal"
-        android:text="OrganDonation"
-        android:textSize="34sp"
+        android:text="Organ donation"
+        android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/nameET"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="90dp"
-        android:layout_marginTop="78dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="EnterName"
+        android:hint="Enter Name"
         android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
 
     <EditText
         android:id="@+id/emailET"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="90dp"
-        android:layout_marginTop="11dp"
+        android:layout_marginTop="19dp"
         android:ems="10"
-        android:hint="EnterEmail"
+        android:hint="Enter the Email"
         android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameET"/>
+        app:layout_constraintTop_toBottomOf="@+id/nameET" />
 
     <EditText
         android:id="@+id/passwordET"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="19dp"
         android:ems="10"
-        android:hint="EnterPassword"
+        android:hint="enter Password"
         android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailET" />
 
     <Button
-        android:id="@+id/loginBTN"
-        android:layout_width="89dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="44dp"
-        android:text="LOGIN"
+        android:id="@+id/logInBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="45dp"
+        android:text="Log In"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordET"/>
+        app:layout_constraintTop_toBottomOf="@+id/passwordET" />
 
     <Button
-        android:id="@+id/RegisterBTN"
-        android:layout_width="115dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="96dp"
+        android:id="@+id/registerBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="117dp"
         android:layout_marginTop="40dp"
-        android:text="Register"
-        app:layout_constraintStart_toEndOf="@+id/loginBTN"
+        android:text="Resgister"
+        app:layout_constraintStart_toEndOf="@+id/logInBTN"
         app:layout_constraintTop_toBottomOf="@+id/passwordET" />
+
+    <!-- Remaining views and constraints -->
+
 </androidx.constraintlayout.widget.ConstraintLayout>
