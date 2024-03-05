@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/title"
@@ -14,7 +12,7 @@
         android:layout_marginTop="10dp"
         android:background="#CDDC39"
         android:gravity="center_horizontal"
-        android:text="Organ donation"
+        android:text="Organdonation"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,57 +23,59 @@
         android:id="@+id/nameET"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="91dp"
         android:ems="10"
-        android:hint="Enter Name"
+        android:hint="EnterName"
         android:inputType="text"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        tools:layout_editor_absoluteX="50dp" />
 
     <EditText
         android:id="@+id/emailET"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="19dp"
-        android:ems="10"
-        android:hint="Enter the Email"
-        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameET" />
+        app:layout_constraintTop_toBottomOf="@+id/nameET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="EntertheEmail"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="194dp" />
 
     <EditText
         android:id="@+id/passwordET"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="19dp"
-        android:ems="10"
-        android:hint="enter Password"
-        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailET" />
+        app:layout_constraintTop_toBottomOf="@+id/emailET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="enterPassword"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="262dp" />
 
     <Button
         android:id="@+id/logInBTN"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordET"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="45dp"
-        android:text="Log In"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordET" />
+        android:text="LogIn"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="380dp" />
 
     <Button
         android:id="@+id/registerBTN"
+        app:layout_constraintStart_toEndOf="@+id/logInBTN"
+        app:layout_constraintTop_toBottomOf="@+id/passwordET"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="117dp"
-        android:layout_marginTop="40dp"
         android:text="Resgister"
-        app:layout_constraintStart_toEndOf="@+id/logInBTN"
-        app:layout_constraintTop_toBottomOf="@+id/passwordET" />
-
-    <!-- Remaining views and constraints -->
+        tools:layout_editor_absoluteX="252dp"
+        tools:layout_editor_absoluteY="380dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,12 +17,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         logInBTN = findViewById(R.id.logInBTN);
-            logInBTN.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent ini = new Intent(MainActivity.this, homepage.class);
-                    startActivity(ini);
-                }
-            });
-        }
+        logInBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent ini = new Intent(MainActivity.this, homepage.class);
+                startActivity(ini);
+            }
+        });
+    }
 }
