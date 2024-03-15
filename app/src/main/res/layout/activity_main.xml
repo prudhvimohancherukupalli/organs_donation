@@ -17,9 +17,12 @@
         android:text="Organ donation"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 
     <EditText
         android:id="@+id/nameET"
@@ -79,6 +82,6 @@
         app:layout_constraintStart_toEndOf="@+id/logInBTN"
         app:layout_constraintTop_toBottomOf="@+id/passwordET" />
 
-    <!-- Remaining views and constraints -->
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

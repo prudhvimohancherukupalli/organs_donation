@@ -3,9 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
-    tools:context=".receiverhomepage">
+    tools:context=".blooddonationpage">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,24 +13,21 @@
         android:orientation="vertical">
 
 
-
         <TextView
-            android:id="@+id/Title"
+            android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:background="#39C9DC"
-            android:gravity="center_horizontal"
-            android:text="Organs"
-            android:textSize="34sp"
-            android:textStyle="bold"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="0dp" />
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:text="Blood Group"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="30dp"
             android:weightSum="2">
 
             <LinearLayout
@@ -43,12 +39,12 @@
                 android:gravity="center">
 
                 <Button
-                    android:id="@+id/heartBTN"
+                    android:id="@+id/aPositive"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
-                    android:backgroundTint="#ED7564"
+                    android:backgroundTint="#F44336"
                     android:gravity="center"
-                    android:text="Heart" />
+                    android:text="A+" />
             </LinearLayout>
 
             <LinearLayout
@@ -60,12 +56,12 @@
                 android:gravity="center">
 
                 <Button
-                    android:id="@+id/liverBTN"
+                    android:id="@+id/aNegative"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
-                    android:backgroundTint="#ED7564"
+                    android:backgroundTint="#F44336"
                     android:gravity="center"
-                    android:text="Liver" />
+                    android:text="A-" />
             </LinearLayout>
         </LinearLayout>
 
@@ -83,12 +79,12 @@
                 android:gravity="center">
 
                 <Button
-                    android:id="@+id/lungsBTN"
+                    android:id="@+id/bPositive"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
-                    android:backgroundTint="#ED7564"
+                    android:backgroundTint="#F44336"
                     android:gravity="center"
-                    android:text="Lungs" />
+                    android:text="B+" />
             </LinearLayout>
 
             <LinearLayout
@@ -100,12 +96,12 @@
                 android:gravity="center">
 
                 <Button
-                    android:id="@+id/kidneysBTN"
+                    android:id="@+id/bNegative"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
-                    android:backgroundTint="#ED7564"
+                    android:backgroundTint="#F44336"
                     android:gravity="center"
-                    android:text="Kidneys" />
+                    android:text="B-" />
             </LinearLayout>
         </LinearLayout>
 
@@ -123,12 +119,12 @@
                 android:gravity="center">
 
                 <Button
-                    android:id="@+id/pancreasBTN"
+                    android:id="@+id/abPositive"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
-                    android:backgroundTint="#ED7564"
+                    android:backgroundTint="#F44336"
                     android:gravity="center"
-                    android:text="Pancreas" />
+                    android:text="AB+" />
             </LinearLayout>
 
             <LinearLayout
@@ -140,12 +136,52 @@
                 android:gravity="center">
 
                 <Button
-                    android:id="@+id/smallbowelBTN"
+                    android:id="@+id/abNegative"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
-                    android:backgroundTint="#ED7564"
+                    android:backgroundTint="#F44336"
                     android:gravity="center"
-                    android:text="Small Bowel" />
+                    android:text="AB-" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="30dp"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/oPositive"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:backgroundTint="#F44336"
+                    android:gravity="center"
+                    android:text="O+" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="30dp"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/oNegative"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:backgroundTint="#F44336"
+                    android:gravity="center"
+                    android:text="O-" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
