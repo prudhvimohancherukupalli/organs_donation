@@ -12,6 +12,55 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Organs_donation"
         tools:targetApi="31">
+
+        <activity
+            android:name=".homepage"
+            android:exported="false" />
+
+        <activity
+            android:name=".AB_NegativeList"
+            android:exported="false" />
+        <activity
+            android:name=".AB_PositiveList"
+            android:exported="false" />
+        <activity
+            android:name=".O_NegativeList"
+            android:exported="false" />
+        <activity
+            android:name=".O_PositiveList"
+            android:exported="false" />
+        <activity
+            android:name=".B_NegativeList"
+            android:exported="false" />
+        <activity
+            android:name=".A_NegativeList"
+            android:exported="false" />
+        <activity
+            android:name=".B_PositiveList"
+            android:exported="false" />
+        <activity
+            android:name=".A_PositiveList"
+            android:exported="false" />
+        <activity
+            android:name=".smallBowelList"
+            android:exported="false" />
+        <activity
+            android:name=".pancreasList"
+            android:exported="false" />
+        <activity
+            android:name=".lungsList"
+            android:exported="false" />
+        <activity
+            android:name=".kidneyList"
+            android:exported="false" />
+        <activity
+            android:name=".heartList"
+            android:exported="false" />
+        <activity
+            android:name=".LiverList"
+            android:exported="false" />
+
+
         <activity
             android:name=".donorpage"
             android:exported="false" />
