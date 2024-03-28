@@ -7,8 +7,16 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/title"
+        android:layout_width="409dp"
+        android:layout_height="74dp"
+        android:layout_marginBottom="712dp"
+        android:background="#ED0D0D"
+        android:foregroundGravity="clip_horizontal"
+        android:gravity="clip_horizontal|center|clip_vertical|center_horizontal"
+        android:text="O -"
+        android:textColorHint="#E91E63"
+        android:textSize="34sp"
+        />
 
 </FrameLayout>

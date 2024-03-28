@@ -26,16 +26,18 @@ public class blooddonationpage extends AppCompatActivity {
         aPositiveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(blooddonationpage.this, a_postivefrag.class);
-                startActivity(intent);
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragmentContainer, new a_postivefrag())
+                        .commit();
             }
         });
 
         aNegativeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(blooddonationpage.this, a_negativefrag.class);
-                startActivity(intent);
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragmentContainer, new a_negativefrag())
+                        .commit();
             }
         });
 
@@ -78,16 +80,19 @@ public class blooddonationpage extends AppCompatActivity {
         oPositiveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(blooddonationpage.this, o_positivefrag.class);
-                startActivity(intent);
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragmentContainer, new o_positivefrag())
+                        .commit();
             }
         });
 
         oNegativeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(blooddonationpage.this, o_negativefrag.class);
-                startActivity(intent);
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragmentContainer, new o_negativefrag())
+                        .commit();
+
             }
         });
     }
