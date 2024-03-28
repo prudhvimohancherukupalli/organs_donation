@@ -26,7 +26,7 @@ public class blooddonationpage extends AppCompatActivity {
         aPositiveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(blooddonationpage.this, A_PositiveList.class);
+                Intent intent = new Intent(blooddonationpage.this, a_postivefrag.class);
                 startActivity(intent);
             }
         });
@@ -34,7 +34,7 @@ public class blooddonationpage extends AppCompatActivity {
         aNegativeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(blooddonationpage.this, A_NegativeList.class);
+                Intent intent = new Intent(blooddonationpage.this, a_negativefrag.class);
                 startActivity(intent);
             }
         });
