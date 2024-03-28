@@ -12,7 +12,7 @@ public class blooddonationpage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.blooddonationhomepage);
+        setContentView(R.layout.blooddonationpage);
 
         Button aPositiveButton = findViewById(R.id.aPositive);
         Button aNegativeButton = findViewById(R.id.aNegative);
@@ -42,39 +42,43 @@ public class blooddonationpage extends AppCompatActivity {
         bPositiveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(blooddonationpage.this, B_PositiveList.class);
-                startActivity(intent);
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragmentContainer, new b_positivefrag())
+                        .commit();
             }
         });
 
         bNegativeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(blooddonationpage.this, B_NegativeList.class);
-                startActivity(intent);
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragmentContainer, new b_negativefrag())
+                        .commit();
             }
         });
 
         abPositiveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(blooddonationpage.this, AB_PositiveList.class);
-                startActivity(intent);
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragmentContainer, new ab_positivefrag())
+                        .commit();
             }
         });
 
         abNegativeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(blooddonationpage.this, AB_NegativeList.class);
-                startActivity(intent);
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragmentContainer, new ab_negativefrag())
+                        .commit();
             }
         });
 
         oPositiveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(blooddonationpage.this, O_PositiveList.class);
+                Intent intent = new Intent(blooddonationpage.this, o_positivefrag.class);
                 startActivity(intent);
             }
         });
@@ -82,7 +86,7 @@ public class blooddonationpage extends AppCompatActivity {
         oNegativeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(blooddonationpage.this, O_NegativeList.class);
+                Intent intent = new Intent(blooddonationpage.this, o_negativefrag.class);
                 startActivity(intent);
             }
         });
