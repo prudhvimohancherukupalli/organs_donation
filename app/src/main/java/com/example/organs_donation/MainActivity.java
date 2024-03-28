@@ -23,22 +23,18 @@ public class MainActivity extends AppCompatActivity {
 
         logInBTN = findViewById(R.id.logInBTN);
         registerBTN = findViewById(R.id.registerBTN);
-
         logInBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.d("MainActivity", "Login button clicked");
-
                 Intent ini = new Intent(MainActivity.this, homepage.class);
                 startActivity(ini);
             }
         });
-
         registerBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.d("MainActivity", "Register button clicked");
-
                 Intent ini = new Intent(MainActivity.this, Register_Page.class);
                 startActivity(ini);
             }

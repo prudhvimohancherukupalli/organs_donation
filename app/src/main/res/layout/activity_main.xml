@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -28,39 +29,40 @@
         android:id="@+id/nameET"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:padding="12dp"
-        android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Enter Name"
         android:inputType="text"
+        android:padding="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title" />
 
     <EditText
         android:id="@+id/emailET"
-        android:layout_width="fill_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:padding="12dp"
         android:layout_marginTop="19dp"
         android:ems="10"
         android:hint="Enter the Email"
         android:inputType="text"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameET" />
+        app:layout_constraintTop_toBottomOf="@id/nameET" />
 
     <EditText
         android:id="@+id/passwordET"
-        android:layout_width="fill_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:padding="12dp"
         android:layout_marginTop="19dp"
         android:ems="10"
         android:hint="enter Password"
         android:inputType="text"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailET" />
+        app:layout_constraintTop_toBottomOf="@id/emailET" />
 
     <Button
         android:id="@+id/logInBTN"
@@ -70,7 +72,7 @@
         android:layout_marginTop="45dp"
         android:text="Log In"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordET" />
+        app:layout_constraintTop_toBottomOf="@id/passwordET" />
 
     <Button
         android:id="@+id/registerBTN"
@@ -79,9 +81,8 @@
         android:layout_marginStart="117dp"
         android:layout_marginTop="40dp"
         android:text="Register"
-        app:layout_constraintStart_toEndOf="@+id/logInBTN"
-        app:layout_constraintTop_toBottomOf="@+id/passwordET" />
-
+        app:layout_constraintStart_toEndOf="@id/logInBTN"
+        app:layout_constraintTop_toBottomOf="@id/passwordET" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
