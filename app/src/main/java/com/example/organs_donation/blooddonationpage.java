@@ -74,16 +74,20 @@ public class blooddonationpage extends AppCompatActivity {
         oPositiveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(blooddonationpage.this, O_PositiveList.class);
-                startActivity(intent);
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragmentContainer, new o_positivefrag())
+                        .commit();
+
             }
         });
 
         oNegativeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(blooddonationpage.this, O_NegativeList.class);
-                startActivity(intent);
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragmentContainer, new o_negativefrag())
+                        .commit();
+
             }
         });
     }
