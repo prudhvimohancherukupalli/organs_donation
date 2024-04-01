@@ -1,42 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/secpasswordET"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center_vertical"
     android:background="#F3D16B"
+    android:orientation="vertical"
     tools:context=".Register_Page">
 
     <TextView
-        android:id="@+id/registerheadTV"
+        android:id="@+id/registerTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:height="30sp"
         android:background="#27DD31"
-        android:backgroundTint="#2196F3"
         android:gravity="center_horizontal"
-        android:text="REGISTRATION PAGE"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/password2ET"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Re write the password"
-        android:inputType="textPassword"
-        android:padding="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.223"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.651" />
+        android:text="@string/register"
+        android:textSize="24sp" />
 
     <EditText
         android:id="@+id/nameET"
@@ -44,13 +27,8 @@
         android:layout_height="wrap_content"
         android:padding="12dp"
         android:ems="10"
-        android:hint="Enter Name"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.126" />
+        android:hint="@string/name"
+        android:inputType="text" />
 
     <EditText
         android:id="@+id/emailidET"
@@ -58,14 +36,8 @@
         android:layout_height="wrap_content"
         android:padding="12dp"
         android:ems="10"
-        android:hint="Enter EmailID"
-        android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.223"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.228" />
+        android:hint="@string/email"
+        android:inputType="textEmailAddress" />
 
     <EditText
         android:id="@+id/phnumET"
@@ -73,56 +45,55 @@
         android:layout_height="wrap_content"
         android:padding="12dp"
         android:ems="10"
-        android:hint="Enter Phone Number"
-        android:inputType="phone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.223"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.336" />
+        android:hint="@string/phnum"
+        android:inputType="phone" />
+    <EditText
+        android:id="@+id/userIdET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:ems="10"
+        android:hint="@string/userID"
+        android:inputType="text" />
+
+
 
     <EditText
         android:id="@+id/addressET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Enter Address"
+        android:hint="@string/address"
         android:inputType="textPostalAddress"
-        android:padding="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.223"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.444" />
-
-    <Button
-        android:id="@+id/registerBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Register"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.167"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.793" />
+        android:padding="12dp" />
 
     <EditText
         android:id="@+id/passwordET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Enter Password"
-        android:inputType="textPassword"
         android:padding="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.223"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.546" />
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword" />
 
+    <EditText
+        android:id="@+id/password2ET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:ems="10"
+        android:hint="@string/repassword"
+        android:inputType="textPassword" />
+    <ProgressBar
+        android:id="@+id/progessBarR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/registerBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register" />
+
+</LinearLayout>
