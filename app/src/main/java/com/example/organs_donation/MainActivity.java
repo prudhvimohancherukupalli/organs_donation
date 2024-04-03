@@ -11,8 +11,7 @@ import android.widget.Button;
 import java.time.Instant;
 
 public class MainActivity extends AppCompatActivity {
-    Button logInBTN;
-    Button registerBTN;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,22 +20,15 @@ public class MainActivity extends AppCompatActivity {
 
         Log.d("MainActivity", "onCreate executed");
 
-        logInBTN = findViewById(R.id.logInBTN);
-        registerBTN = findViewById(R.id.registerBTN);
-        logInBTN.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d("MainActivity", "Login button clicked");
-                Intent ini = new Intent(MainActivity.this, homepage.class);
-                startActivity(ini);
-            }
-        });
-        registerBTN.setOnClickListener(new View.OnClickListener() {
+       Button logoutButton = findViewById(R.id.logoutBTN);
+
+        logoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.d("MainActivity", "Register button clicked");
-                Intent ini = new Intent(MainActivity.this, Register_Page.class);
+                Intent ini = new Intent(MainActivity.this, Login_Page.class);
                 startActivity(ini);
+                //finish();
             }
         });
     }
