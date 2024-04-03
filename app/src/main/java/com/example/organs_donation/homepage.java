@@ -4,9 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class homepage extends AppCompatActivity {
 
@@ -14,6 +19,9 @@ public class homepage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.homepage);
+
+
+
 
         // Get references to the buttons
         TextView donorButton = findViewById(R.id.DonarTV);
@@ -53,20 +61,40 @@ public class homepage extends AppCompatActivity {
         });
 
         // Set OnClickListener for the Logout button
+        // Set OnClickListener for the Logout button
         logoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 try {
-                    // Redirect to the Login activity
-                    Intent intent = new Intent(homepage.this, Login_Page.class);
-                    startActivity(intent);
-                    finish();
+                    // Sign out the user from Firebase
+                    FirebaseAuth.getInstance().signOut();
+
+                    // Finish the current activity (homepage) after a short delay
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            // Create intent for the login page
+                            Intent intent = new Intent(homepage.this, Login_Page.class);
+
+                            // Add flags to clear the entire activity stack and create a new task
+                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+
+                            // Start the login page activity
+                            startActivity(intent);
+
+                            // Finish the current activity (homepage)
+                            finish();
+                        }
+                    }, 500); // Adjust the delay time if needed
                 } catch (Exception e) {
                     e.printStackTrace();
                     // Handle any exceptions here
                 }
             }
         });
+
+
+
 
     }
 }
