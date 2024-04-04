@@ -14,8 +14,8 @@ public class DonorPage extends AppCompatActivity {
 
     private EditText nameEditText, ageEditText, bloodGroupEditText, phoneEditText;
 
-    private Toolbar bloodTB; // Corrected the variable name here
-
+    
+    private Toolbar organTB;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,8 +30,9 @@ public class DonorPage extends AppCompatActivity {
         Button saveButton = findViewById(R.id.saveBTN);
         Button editButton = findViewById(R.id.editBTN);
         Button submitButton = findViewById(R.id.submitBTN);
-        bloodTB = findViewById(R.id.bloodTB); // Corrected the variable name here
-        setSupportActionBar(bloodTB);
+        
+        organTB = findViewById(R.id.organTB); // Corrected the variable name here
+        setSupportActionBar(organTB);
 
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,54 +55,83 @@ public class DonorPage extends AppCompatActivity {
             }
         });
     }
-
+//toolbar for blood donation
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int itemId = item.getItemId();
 
         if (itemId == R.id.blood_type_a_plus) {
-            handleDropdownSelection("A+");
+            handleOrganSelection("A+");
             return true;
         } else if (itemId == R.id.blood_type_b_plus) {
-            handleDropdownSelection("B+");
+            handleOrganSelection("B+");
             return true;
         } else if (itemId == R.id.blood_type_a_minus) {
-            handleDropdownSelection("A-");
+            handleOrganSelection("A-");
             return true;
         } else if (itemId == R.id.blood_type_b_minus) {
-            handleDropdownSelection("B-");
+            handleOrganSelection("B-");
             return true;
         } else if (itemId == R.id.blood_type_ab_plus) {
-            handleDropdownSelection("AB+");
+            handleOrganSelection("AB+");
             return true;
         } else if (itemId == R.id.blood_type_ab_minus) {
-            handleDropdownSelection("AB-");
+            handleOrganSelection("AB-");
             return true;
         } else if (itemId == R.id.blood_type_o_plus) {
-            handleDropdownSelection("O+-");
+            handleOrganSelection("O+-");
             return true;
         } else if (itemId == R.id.blood_type_o_minus) {
-            handleDropdownSelection("O-");
+            handleOrganSelection("O-");
+            return true;
+        } else if (itemId == R.id.organ_lungs) {
+            handleOrganSelection("Lungs");
+            return true;
+        } else if (itemId == R.id.organ_heart) {
+            handleOrganSelection("Heart");
+            return true;
+        } else if (itemId == R.id.organ_kidney) {
+            handleOrganSelection("Kidney");
+            return true;
+        } else if (itemId == R.id.organ_liver) {
+            handleOrganSelection("Liver");
+            return true;
+        } else if (itemId == R.id.organ_pancreas) {
+            handleOrganSelection("Pancreas");
+            return true;
+        } else if (itemId == R.id.organ_small_bowel) {
+            handleOrganSelection("Small Bowel");
             return true;
         } else {
             return super.onOptionsItemSelected(item);
         }
+        
     }
+
+
+
+    
+
+    
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.blood_main, menu);
+        getMenuInflater().inflate(R.menu.organ_main, menu);
+        
+
         return true;
     }
 
-    private void handleDropdownSelection(String bloodType) {
-        showToast(bloodType + " selected");
-        bloodTB.setTitle(bloodType);
+    private void handleOrganSelection(String organ) {
+        showToast(organ + " selected");
+        organTB.setTitle(organ);
     }
 
     private void showToast(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
+
+
 
     private void saveData() {
         // Retrieve data from EditText fields
