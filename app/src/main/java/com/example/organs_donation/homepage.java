@@ -57,10 +57,10 @@ public class homepage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    // Redirect to the Login activity
+                    // Redirect to the Login activity and clear back stack
                     Intent intent = new Intent(homepage.this, Login_Page.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
-                    finish();
                 } catch (Exception e) {
                     e.printStackTrace();
                     // Handle any exceptions here
