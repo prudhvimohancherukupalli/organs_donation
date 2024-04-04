@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -21,8 +20,6 @@ public class homepage extends AppCompatActivity {
         setContentView(R.layout.homepage);
 
 
-
-
         // Get references to the buttons
         TextView donorButton = findViewById(R.id.DonarTV);
         TextView bloodDonorButton = findViewById(R.id.BloodDonarTV);
@@ -35,7 +32,7 @@ public class homepage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Redirect to the Donor activity
-                Intent intent = new Intent(homepage.this, donorpage.class);
+                Intent intent = new Intent(homepage.this, DonorPage.class);
                 startActivity(intent);
             }
         });

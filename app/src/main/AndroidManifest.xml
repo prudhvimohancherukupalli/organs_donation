@@ -71,7 +71,7 @@
             android:name=".LiverList"
             android:exported="false" />
         <activity
-            android:name=".donorpage"
+            android:name=".DonorPage"
             android:exported="false" />
         <activity
             android:name=".blooddonationpage"
