@@ -17,4 +17,5 @@
     <string name="phnum">Enter Phone Number</string>
     <string name="address">Enter Address</string>
     <string name="repassword">Re write the password</string>
+    <string name="blood_types">Blood Types</string>
 </resources>
