@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
-public class receiverhomepage extends AppCompatActivity {
+public class ReceiverHomePage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +23,7 @@ public class receiverhomepage extends AppCompatActivity {
         heartButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(receiverhomepage.this, heartList.class);
+                Intent intent = new Intent(ReceiverHomePage.this, heartList.class);
                 startActivity(intent);
             }
         });
@@ -31,7 +31,7 @@ public class receiverhomepage extends AppCompatActivity {
         liverButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(receiverhomepage.this, LiverList.class);
+                Intent intent = new Intent(ReceiverHomePage.this, LiverList.class);
                 startActivity(intent);
             }
         });
@@ -39,7 +39,7 @@ public class receiverhomepage extends AppCompatActivity {
         lungsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(receiverhomepage.this, lungsList.class);
+                Intent intent = new Intent(ReceiverHomePage.this, lungsList.class);
                 startActivity(intent);
             }
         });
@@ -47,7 +47,7 @@ public class receiverhomepage extends AppCompatActivity {
         kidneysButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(receiverhomepage.this, kidneyList.class);
+                Intent intent = new Intent(ReceiverHomePage.this, kidneyList.class);
                 startActivity(intent);
             }
         });
@@ -55,7 +55,7 @@ public class receiverhomepage extends AppCompatActivity {
         pancreasButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(receiverhomepage.this, pancreasList.class);
+                Intent intent = new Intent(ReceiverHomePage.this, pancreasList.class);
                 startActivity(intent);
             }
         });
@@ -63,7 +63,7 @@ public class receiverhomepage extends AppCompatActivity {
         smallBowelButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(receiverhomepage.this, smallBowelList.class);
+                Intent intent = new Intent(ReceiverHomePage.this, smallBowelList.class);
                 startActivity(intent);
             }
         });

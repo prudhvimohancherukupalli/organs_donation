@@ -9,53 +9,48 @@ import android.widget.EditText;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class DonorPage extends AppCompatActivity {
 
-    private EditText nameEditText, ageEditText, bloodGroupEditText, phoneEditText;
-
-    
+    private EditText nameEditText, ageEditText, bloodGroupEditText, phoneEditText, healthEditText;
     private Toolbar organTB;
+    private DatabaseReference databaseReference;
+    String health = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.donorpage);
-
-        // Initialize EditText fields
+        // Initialize Firebase Database
+        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReference = firebaseDatabase.getReference("donors");
         nameEditText = findViewById(R.id.nameET);
         ageEditText = findViewById(R.id.ageET);
         bloodGroupEditText = findViewById(R.id.bloodGroupET);
         phoneEditText = findViewById(R.id.phoneET);
+        healthEditText = findViewById(R.id.healthET);
 
-        Button saveButton = findViewById(R.id.saveBTN);
-        Button editButton = findViewById(R.id.editBTN);
         Button submitButton = findViewById(R.id.submitBTN);
-        
-        organTB = findViewById(R.id.organTB); // Corrected the variable name here
+        organTB = findViewById(R.id.organTB);
         setSupportActionBar(organTB);
-
-        saveButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                saveData();
-            }
-        });
-
-        editButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                enableEditTexts(true);
-            }
-        });
 
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                saveData();
                 submitData();
             }
         });
     }
-//toolbar for blood donation
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.organ_main, menu);
+        return true;
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int itemId = item.getItemId();
@@ -105,22 +100,8 @@ public class DonorPage extends AppCompatActivity {
         } else {
             return super.onOptionsItemSelected(item);
         }
-        
     }
 
-
-
-    
-
-    
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.organ_main, menu);
-        
-
-        return true;
-    }
 
     private void handleOrganSelection(String organ) {
         showToast(organ + " selected");
@@ -130,8 +111,6 @@ public class DonorPage extends AppCompatActivity {
     private void showToast(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
-
-
 
     private void saveData() {
         // Retrieve data from EditText fields
@@ -145,16 +124,9 @@ public class DonorPage extends AppCompatActivity {
         String message = "Name: " + name + "\n" +
                 "Age: " + age + "\n" +
                 "Blood Group: " + bloodGroup + "\n" +
-                "Phone Number: " + phone;
+                "Phone Number: " + phone + "\n" +
+                "Health Status: " + health;
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
-    }
-
-    private void enableEditTexts(boolean enabled) {
-        // Enable or disable EditText fields based on the 'enabled' parameter
-        nameEditText.setEnabled(enabled);
-        ageEditText.setEnabled(enabled);
-        bloodGroupEditText.setEnabled(enabled);
-        phoneEditText.setEnabled(enabled);
     }
 
     private void submitData() {
