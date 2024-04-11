@@ -24,6 +24,7 @@ public class ReceiverHomePage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ReceiverHomePage.this, heartList.class);
+                intent.putExtra("selectedOrgan", "heartDonors");
                 startActivity(intent);
             }
         });
@@ -32,6 +33,7 @@ public class ReceiverHomePage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ReceiverHomePage.this, LiverList.class);
+                intent.putExtra("selectedOrgan", "liverDonors");
                 startActivity(intent);
             }
         });
@@ -40,6 +42,7 @@ public class ReceiverHomePage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ReceiverHomePage.this, lungsList.class);
+                intent.putExtra("selectedOrgan", "lungDonors");
                 startActivity(intent);
             }
         });
@@ -48,6 +51,7 @@ public class ReceiverHomePage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ReceiverHomePage.this, kidneyList.class);
+                intent.putExtra("selectedOrgan", "kidneyDonors");
                 startActivity(intent);
             }
         });
@@ -56,6 +60,7 @@ public class ReceiverHomePage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ReceiverHomePage.this, pancreasList.class);
+                intent.putExtra("selectedOrgan", "pancreasDonors");
                 startActivity(intent);
             }
         });
@@ -63,9 +68,12 @@ public class ReceiverHomePage extends AppCompatActivity {
         smallBowelButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Pass selected organ information to smallBowelList activity
                 Intent intent = new Intent(ReceiverHomePage.this, smallBowelList.class);
+                intent.putExtra("selectedOrgan", "small bowelDonors"); // Pass the selected organ as "smallBowel"
                 startActivity(intent);
             }
         });
+
     }
 }
