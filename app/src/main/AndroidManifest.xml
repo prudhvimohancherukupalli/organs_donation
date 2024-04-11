@@ -79,6 +79,9 @@
             android:name=".ReceiverHomePage"
             android:exported="false" />
         <activity
+            android:name=".DonorView"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"></activity>
     </application>

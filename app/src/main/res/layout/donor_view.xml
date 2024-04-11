@@ -7,8 +7,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:context=".LungsView">
+        android:layout_height="match_parent"
+        tools:context=".DonorView">
 
         <TextView
             android:id="@+id/Title"
@@ -17,7 +17,7 @@
             android:layout_marginTop="40dp"
             android:background="#39C9DC"
             android:gravity="center_horizontal"
-            android:text="LUNGS VIEW LIST"
+            android:text="DONOR VIEW LIST"
             android:textSize="34sp"
             android:textStyle="bold"
             app:layout_constraintTop_toTopOf="parent"
@@ -25,7 +25,7 @@
             app:layout_constraintEnd_toEndOf="parent" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/lungsListView"
+            android:id="@+id/DonorView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/Title"
