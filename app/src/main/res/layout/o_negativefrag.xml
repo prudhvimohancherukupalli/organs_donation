@@ -1,22 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".o_negativefrag">
+    android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="409dp"
-        android:layout_height="74dp"
-        android:layout_marginBottom="712dp"
-        android:background="#ED0D0D"
-        android:foregroundGravity="clip_horizontal"
-        android:gravity="clip_horizontal|center|clip_vertical|center_horizontal"
-        android:text="O -"
-        android:textColorHint="#E91E63"
-        android:textSize="34sp"
-        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <!-- TextView -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="409dp"
+            android:layout_height="74dp"
+            android:layout_marginBottom="24dp"
+            android:background="#ED0D0D"
+            android:gravity="center"
+            android:text="O -"
+            android:textColor="#E91E63"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toTopOf="@id/anegativeView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="NotSibling" />
+
+        <!-- RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/onegativeView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
