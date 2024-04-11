@@ -1,4 +1,3 @@
-<!-- res/menu/organ_menu.xml -->
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/organ_lungs"
         android:title="Lungs" />
@@ -15,9 +14,9 @@
     <item android:id="@+id/blood_type_a_plus"
         android:title="A+" />
     <item android:id="@+id/blood_type_b_plus"
-        android:title="A-" />
-    <item android:id="@+id/blood_type_a_minus"
         android:title="B+" />
+    <item android:id="@+id/blood_type_a_minus"
+        android:title="A-" />
     <item android:id="@+id/blood_type_b_minus"
         android:title="B-" />
     <item android:id="@+id/blood_type_ab_plus"
@@ -25,7 +24,7 @@
     <item android:id="@+id/blood_type_ab_minus"
         android:title="AB-" />
     <item android:id="@+id/blood_type_o_plus"
-        android:title="O+-" />
+        android:title="O+" />
     <item android:id="@+id/blood_type_o_minus"
         android:title="O-" />
 </menu>

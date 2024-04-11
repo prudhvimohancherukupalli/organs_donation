@@ -1,21 +1,31 @@
 package com.example.organs_donation;
+
 public class Donor {
     private String name;
     private String age;
     private String bloodGroup;
     private String phone;
     private String health;
+    private String organToDonate;
+    private String address;
+    private String hospitalName;
+    private String id;
 
+    // Default constructor (required by Firebase)
     public Donor() {
         // Default constructor required for calls to DataSnapshot.getValue(Donor.class)
     }
 
-    public Donor(String name, String age, String bloodGroup, String phone, String health) {
+    public Donor(String name, String age, String bloodGroup, String phone, String health, String address, String hospitalName, String organToDonate) {
         this.name = name;
         this.age = age;
         this.bloodGroup = bloodGroup;
         this.phone = phone;
         this.health = health;
+        this.organToDonate = organToDonate;
+        this.address = address;
+        this.hospitalName= hospitalName;
+        this.id= id;
     }
 
     // Getters and setters
@@ -57,5 +67,37 @@ public class Donor {
 
     public void setHealth(String health) {
         this.health = health;
+    }
+
+    public String getOrganToDonate() {
+        return organToDonate;
+    }
+
+    public void setOrganToDonate(String organToDonate) {
+        this.organToDonate = organToDonate;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getHospitalName() {
+        return hospitalName;
+    }
+
+    public void setHospitalName(String hospitalName) {
+        this.hospitalName = hospitalName;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }
