@@ -27,7 +27,7 @@
   - Resolved errors and refined intents to meet project requirements, ensuring smooth functionality.
   - Worked on the DonorPage activity, Donor Adapter, and Donor View, focusing on managing the editing of current donor information by extracting data from the intent and adjusting form fields accordingly.
  
- - **Ananda Reddy Alla (S567113)**
+ - **Venkatesh Koya (S566638)**
     - Contributed basic XML and Java code for the donor-related functionalities.
     - Developed XML and Java files for Blood Donation features, along with relevant fragments.
     - Initiated alignment of donor-related XML and Java files as per project specifications after implementing authentication.
