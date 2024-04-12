@@ -20,6 +20,7 @@
  - **Prudhvi Mohan Cherukupalli**
     - Created GitHub repository and project to initiate the project.
     - Developed XML and Java files for Blood Donations Fragments.
+    - Implemented XML and Java code for the Main Page layout. Developed XML and Java files for Blood Donation functionality, including necessary fragments
 
 - **Ananda Reddy Alla (S567113)**
   - Created foundational XML and Java code for Blood Donation and Organ Donation functionalities.
