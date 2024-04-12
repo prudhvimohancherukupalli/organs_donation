@@ -6,6 +6,10 @@
 - Venkatesh Koya (S566638)
 - Ananda Reddy Alla (S567113)
 
+  ***Login Credentials**
+  - e mailID : divyabathala26@gmail.com 
+  - Password : 123456
+
 ***Team Contributions:***
 - **Divya Bathala**
   - Developed the initial Login and Register pages to kickstart the project. Created XML and Java files for handling organ-related functionalities. Integrated Firebase for user authentication, ensuring a secure login process
