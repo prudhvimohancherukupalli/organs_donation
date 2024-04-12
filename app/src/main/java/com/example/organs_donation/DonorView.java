@@ -4,10 +4,12 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -34,7 +36,7 @@ public class DonorView extends AppCompatActivity {
         selectedOrgan = getIntent().getStringExtra("selectedOrgan");
 
         // Initialize RecyclerView
-        recyclerView = findViewById(R.id.DonorView);
+        recyclerView = findViewById(R.id.donorRecyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -42,7 +44,7 @@ public class DonorView extends AppCompatActivity {
         donorList = new ArrayList<>();
 
         // Initialize DonorAdapter with showButtons parameter set to true
-        donorAdapter = new DonorAdapter(this, donorList, true,false);
+        donorAdapter = new DonorAdapter(this, donorList, true, false);
 
         // Set adapter to RecyclerView
         recyclerView.setAdapter(donorAdapter);
@@ -59,20 +61,34 @@ public class DonorView extends AppCompatActivity {
         if (selectedOrgan != null) {
             DatabaseReference databaseReference = firebaseDatabase.getReference("donors").child(selectedOrgan.toLowerCase() + "Donors");
 
-            // Query to retrieve donors from Firebase
-            databaseReference.addValueEventListener(new ValueEventListener() {
+            // Listen for child events in the database reference
+            databaseReference.addChildEventListener(new ChildEventListener() {
                 @Override
-                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
-                    // Iterate through dataSnapshot to append new donors to the existing list
-                    for (DataSnapshot donorSnapshot : dataSnapshot.getChildren()) {
-                        Donor donor = donorSnapshot.getValue(Donor.class);
-                        donorList.add(donor);
-                    }
-
-                    // Notify adapter of data change
+                public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String previousChildName) {
+                    // Retrieve the new donor added to the database
+                    Donor donor = dataSnapshot.getValue(Donor.class);
+                    // Add the donor to the list
+                    donorList.add(donor);
+                    // Notify the adapter of the data change
                     donorAdapter.notifyDataSetChanged();
                 }
+
+                @Override
+                public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+
+                }
+
+                @Override
+                public void onChildRemoved(@NonNull DataSnapshot snapshot) {
+
+                }
+
+                @Override
+                public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+
+                }
+
+                // Implement other methods like onChildChanged, onChildRemoved, onChildMoved if needed
 
                 @Override
                 public void onCancelled(@NonNull DatabaseError databaseError) {
@@ -85,4 +101,5 @@ public class DonorView extends AppCompatActivity {
             Toast.makeText(DonorView.this, "Selected organ is null", Toast.LENGTH_SHORT).show();
         }
     }
+
 }
