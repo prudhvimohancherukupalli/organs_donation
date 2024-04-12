@@ -9,6 +9,9 @@
   ***Login Credentials***
   - e mailID : divyabathala26@gmail.com 
   - Password : 123456
+  - 
+  - e mailID : prudhvimohan8@gmail.com
+  - password : 123456
 
 ***Team Contributions:***
 - **Divya Bathala**
