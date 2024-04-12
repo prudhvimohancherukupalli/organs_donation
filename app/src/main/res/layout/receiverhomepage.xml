@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
-    tools:context=".ReceiverHomePage">
+    tools:context=".ReceiverHomePage"
+    android:background="@drawable/bg">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,15 +15,14 @@
         android:orientation="vertical">
 
 
-
         <TextView
             android:id="@+id/Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:background="#39C9DC"
             android:gravity="center_horizontal"
             android:text="Organs"
+            android:textColor="#DA2929"
             android:textSize="34sp"
             android:textStyle="bold"
             app:layout_constraintTop_toTopOf="parent"
@@ -48,7 +48,8 @@
                     android:layout_height="100dp"
                     android:backgroundTint="#ED7564"
                     android:gravity="center"
-                    android:text="Heart" />
+                    android:text="Heart"
+                    />
             </LinearLayout>
 
             <LinearLayout
@@ -65,7 +66,11 @@
                     android:layout_height="100dp"
                     android:backgroundTint="#ED7564"
                     android:gravity="center"
-                    android:text="Liver" />
+
+
+                    android:text="Liver"
+
+                    />
             </LinearLayout>
         </LinearLayout>
 
@@ -88,7 +93,9 @@
                     android:layout_height="100dp"
                     android:backgroundTint="#ED7564"
                     android:gravity="center"
-                    android:text="Lungs" />
+                    android:text="Lungs"
+
+                    />
             </LinearLayout>
 
             <LinearLayout
@@ -105,7 +112,8 @@
                     android:layout_height="100dp"
                     android:backgroundTint="#ED7564"
                     android:gravity="center"
-                    android:text="Kidneys" />
+                    android:text="Kidneys"
+                    />
             </LinearLayout>
         </LinearLayout>
 
@@ -128,7 +136,9 @@
                     android:layout_height="100dp"
                     android:backgroundTint="#ED7564"
                     android:gravity="center"
-                    android:text="Pancreas" />
+                    android:text="Pancreas"
+
+                   />
             </LinearLayout>
 
             <LinearLayout
@@ -145,7 +155,9 @@
                     android:layout_height="100dp"
                     android:backgroundTint="#ED7564"
                     android:gravity="center"
-                    android:text="Small Bowel" />
+                    android:text="Small Bowel"
+
+                    />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
