@@ -47,15 +47,6 @@
         android:ems="10"
         android:hint="@string/phnum"
         android:inputType="phone" />
-    <EditText
-        android:id="@+id/userIdET"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="12dp"
-        android:ems="10"
-        android:hint="@string/userID"
-        android:inputType="text" />
-
 
 
     <EditText

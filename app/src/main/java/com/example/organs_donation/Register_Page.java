@@ -26,7 +26,7 @@ public class Register_Page extends AppCompatActivity {
     private TextView registerTextView;
 
     private FirebaseAuth mAuth;
-    private EditText userIdEditText;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +42,7 @@ public class Register_Page extends AppCompatActivity {
         registerButton = findViewById(R.id.registerBTN);
         progressBar = findViewById(R.id.progessBarR);  // Corrected ID here
         registerTextView = findViewById(R.id.registerTV);
-        userIdEditText = findViewById(R.id.userIdET);
+
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -68,10 +68,10 @@ public class Register_Page extends AppCompatActivity {
         String address = addressEditText.getText().toString().trim();
         String password = passwordEditText.getText().toString().trim();
         String password2 = password2EditText.getText().toString().trim();
-        String userId = userIdEditText.getText().toString().trim();
+
 
         // Perform input validation
-        if (name.isEmpty() || email.isEmpty() || phnum.isEmpty() || address.isEmpty() || password.isEmpty() || password2.isEmpty() || userId.isEmpty()) {
+        if (name.isEmpty() || email.isEmpty() || phnum.isEmpty() || address.isEmpty() || password.isEmpty() || password2.isEmpty() ) {
             Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
             return;
         }
