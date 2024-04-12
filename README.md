@@ -6,7 +6,7 @@
 - Venkatesh Koya (S566638)
 - Ananda Reddy Alla (S567113)
 
-  ***Login Credentials**
+  ***Login Credentials***
   - e mailID : divyabathala26@gmail.com 
   - Password : 123456
 
