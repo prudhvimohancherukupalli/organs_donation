@@ -8,13 +8,13 @@
 
 ***Team Contributions:***
   <b> Divya Bathala </b>
- - Developed the initial Login and Register pages to kickstart the project.
- - Created XML and Java files for handling organ-related functionalities.
- - Integrated Firebase for user authentication, ensuring a secure login process
+   - Developed the initial Login and Register pages to kickstart the project.
+   - Created XML and Java files for handling organ-related functionalities.
+   - Integrated Firebase for user authentication, ensuring a secure login process
  - 
  - **Prudhvi Mohan Cherukupalli**
-  - Created GitHub repository and project to initiate the project.
-  - Developed XML and Java files for Blood Donations Fragments.
+    - Created GitHub repository and project to initiate the project.
+    - Developed XML and Java files for Blood Donations Fragments.
 
 - **Ananda Reddy Alla (S567113)**
   - Created foundational XML and Java code for Blood Donation and Organ Donation functionalities.
