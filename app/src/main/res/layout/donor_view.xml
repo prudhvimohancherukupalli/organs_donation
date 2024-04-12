@@ -1,37 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <TextView
+        android:id="@+id/headingTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Donor List"
+        android:textSize="34sp"
+        android:padding="8dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:background="#EEEEEE" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/donorRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".DonorView">
+        android:layout_below="@id/headingTextView"
+        android:paddingTop="8dp"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"
+        android:paddingBottom="16dp" />
 
-        <TextView
-            android:id="@+id/Title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:background="#39C9DC"
-            android:gravity="center_horizontal"
-            android:text="DONOR VIEW LIST"
-            android:textSize="34sp"
-            android:textStyle="bold"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/DonorView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/Title"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+</RelativeLayout>

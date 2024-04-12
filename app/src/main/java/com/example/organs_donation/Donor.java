@@ -1,6 +1,8 @@
 package com.example.organs_donation;
 
-public class Donor {
+import java.io.Serializable;
+
+public class Donor implements Serializable{
     private String name;
     private String age;
     private String bloodGroup;
