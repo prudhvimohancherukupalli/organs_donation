@@ -64,11 +64,14 @@ public class DonorAdapter extends RecyclerView.Adapter<DonorAdapter.DonorViewHol
         holder.editButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Pass the donor object with the intent
                 Intent intent = new Intent(context, DonorPage.class);
-                intent.putExtra("donorId", donor.getId());
+                intent.putExtra("donor", donor);
                 context.startActivity(intent);
             }
         });
+
+
 
         holder.deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
