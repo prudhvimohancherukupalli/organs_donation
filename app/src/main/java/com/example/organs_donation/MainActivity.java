@@ -44,10 +44,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Redirect to the Donor activity
                 Intent intent = new Intent(MainActivity.this, DonorPage.class);
-
                 // Add flags to clear the entire activity stack and create a new task
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-
                 // Start the donor activity
                 startActivity(intent);
             }
@@ -72,21 +70,15 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     // Sign out the user from Firebase
                     FirebaseAuth.getInstance().signOut();
-
                     // Finish the current activity (homepage) after a short delay
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
                             // Create intent for the login page
                             Intent intent = new Intent(MainActivity.this, Login_Page.class);
-
                             // Add flags to clear the entire activity stack and create a new task
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-
-                            // Start the login page activity
                             startActivity(intent);
-
-                            // Finish the current activity (homepage)
                             finish();
                         }
                     }, 500); // Adjust the delay time if needed
@@ -97,5 +89,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        helpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, help.class);
+                startActivity(intent);
+            }
+        });
     }
 }
