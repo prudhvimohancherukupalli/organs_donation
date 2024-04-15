@@ -115,8 +115,10 @@ public class DonorPage extends AppCompatActivity {
 
 
     // Method to handle blood type selection
-    private void handleBloodTypeSelection(String bloodType) {
-        showToast("Blood Type " + bloodType + " selected");
+    private void handleBloodTypeSelection(String organ) {
+        showToast("Blood Type " + organ + " selected");
+        organTB.setTitle(organ);
+        selectedOrgan = organ;
         // Additional logic if needed
     }
 
