@@ -42,6 +42,7 @@
     - Contributed basic XML and Java code for the donor-related functionalities.
     - Developed XML and Java files for Blood Donation features, along with relevant fragments.
     - Initiated alignment of donor-related XML and Java files as per project specifications after implementing authentication.
+    - Have set On click functionalities where ever required.
 
 
    
