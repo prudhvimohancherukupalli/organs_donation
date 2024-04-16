@@ -106,22 +106,31 @@ public class DonorAdapter extends RecyclerView.Adapter<DonorAdapter.DonorViewHol
             @Override
             public void onClick(View v) {
                 int position = holder.getAdapterPosition();
-                if (position != RecyclerView.NO_POSITION && position < donorList.size()) {
+                if (position != RecyclerView.NO_POSITION) {
                     Donor donor = donorList.get(position);
                     if (donor != null) {
-                        // Proceed with your logic here
-                        // For demonstration, show a toast message
-                        Toast.makeText(context, "Donor booked successfully", Toast.LENGTH_SHORT).show();
-                    } else {
-                        // Handle case where donor object is null
-                        Toast.makeText(context, "Donor object is null", Toast.LENGTH_SHORT).show();
+                        String donorId = donor.getName();
+                        if (donorId != null) {
+                            DatabaseReference donorRef = FirebaseDatabase.getInstance().getReference().child("donors").child(donorId);
+                            donorRef.removeValue().addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void aVoid) {
+                                    donorList.remove(position);
+                                    notifyItemRemoved(position);
+                                    Toast.makeText(context, "Organ Booked successfully", Toast.LENGTH_SHORT).show();
+                                }
+                            }).addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    Toast.makeText(context, "Failed to Book Organ: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                                }
+                            });
+                        }
                     }
-                } else {
-                    // Handle invalid position or empty donor list
-                    Toast.makeText(context, "Invalid position or empty donor list", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+
     }
 
     @Override
