@@ -80,7 +80,7 @@ public class DonorAdapter extends RecyclerView.Adapter<DonorAdapter.DonorViewHol
                 if (position != RecyclerView.NO_POSITION) {
                     Donor donor = donorList.get(position);
                     if (donor != null) {
-                        String donorId = donor.getId();
+                        String donorId = donor.getName();
                         if (donorId != null) {
                             DatabaseReference donorRef = FirebaseDatabase.getInstance().getReference().child("donors").child(donorId);
                             donorRef.removeValue().addOnSuccessListener(new OnSuccessListener<Void>() {
